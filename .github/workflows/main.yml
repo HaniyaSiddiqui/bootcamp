@@ -46,6 +46,6 @@ jobs:
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: 'bootcamp-bell.surge.sh'
-          project: '.'
+          project: './build'
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
