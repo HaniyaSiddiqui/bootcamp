@@ -36,13 +36,14 @@ jobs:
           cmd: install # will run `yarn install` command
 
       - name: Creating build
-        run: npm build
+        run: npm run-script build
         
       - name: Installing Surge
         run: npm install -g surge
       
       - name: Deploy to Surge
         run: surge ./build bootcamp-hs.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+      
        # uses: dswistowski/surge-sh-action@v1
        # with:
        #   domain: 'bootcamp-bell.surge.sh'
